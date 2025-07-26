@@ -1,0 +1,230 @@
+main {
+  padding-top: 160px;
+}
+
+body {
+  background-image: url('paperTexture.jpg');
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background-color: #FFAD65;
+  height: 115px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2vw;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.menu .name {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  flex: 1;
+  margin-right: 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 2vw;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  max-width: 50vw;
+  min-width: 200px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s;
+}
+
+.nav-links a:hover {
+  transform: scale(1.15);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(227, 233, 244, 0.9);
+  border-radius: 25px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 200px;
+  height: auto;
+  border: 8px solid #FFAD65;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: rgb(31, 0, 99);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a:visited {
+  color: rgb(31, 0, 99);
+}
+
+.iconRow {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.iconRow img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.iconRow img:hover {
+  transform: scale(1.1);
+}
+
+.section {
+  scroll-margin-top: 130px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 800px;
+}
+
+.section h1 {
+  font-size: 36px;
+  color: rgb(31, 0, 99);
+}
+
+.skillsList {
+  font-size: 20px;
+  line-height: 1.8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bottom {
+  background-color: rgb(255, 173, 101);
+  height: 75px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-top: 100px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+  z-index: 11;
+}
+
+@media (max-width: 1224px) {
+  .menu {
+    position: fixed;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  main{
+    padding-top: 160px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .right-menu {
+    position: relative;
+    justify-content: space-between;
+    padding: 5px 0;
+    align-items: center;
+    width: 100%;
+  }
+  .name-menu{
+    text-align: center; 
+    padding-top: 15px;
+  }
+  .down-menu {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;     
+    text-align: left;  
+    margin-right: 2vw;
+    gap: 10px;               
+    padding: 10px 0;
+    width: 100%;
+  
+  }
+  .menu .name {
+    font-size: 24px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    margin-right: 2vw;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    top: 100%;    
+    text-align: right;
+    gap: 10px;
+    background-color: #FFAD65;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all .3s ease;
+  }
+
+  .section {
+    scroll-margin-top: 140px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
